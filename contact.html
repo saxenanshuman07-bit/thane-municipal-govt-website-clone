@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | TMC</title>
+    <link rel="icon" href="thane gov logo image.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo.jpg" alt="Logo"> <span>TMC PORTAL</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="work.html">Corporation</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="entertainment.html">City Life</a></li>
+                <li class="nav-item"><a class="nav-link" href="recruitment.html">Recruitment</a></li>
+                <li class="nav-item"><a class="nav-link" href="rts.html">RTS Act</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1920&q=80');">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Contact TMC</h1>
+        <p class="lead">We are here to assist you 24/7</p>
+    </div>
+</header>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-5 mb-4">
+            <div class="card card-custom p-4 bg-primary text-white h-100 border-0">
+                <h3 class="text-white"><i class="fas fa-headset me-2"></i> Get in Touch</h3>
+                <p class="mt-3 text-white-50">For grievances, emergencies, or general inquiries, please reach out to us.</p>
+                
+                <div class="mt-4">
+                    <p class="mb-3"><i class="fas fa-map-marker-alt me-3"></i> <strong>Head Office:</strong><br>Mahapalika Bhavan, Chandan Wadi,<br>Panchpakhadi, Thane - 400602.</p>
+                    <p class="mb-3"><i class="fas fa-phone-alt me-3"></i> <strong>Helpline:</strong> 1800-22-1234</p>
+                    <p class="mb-3"><i class="fas fa-envelope me-3"></i> <strong>Email:</strong> info@thanecity.gov.in</p>
+                    <p class="mb-3"><i class="fas fa-clock me-3"></i> <strong>Hours:</strong> Mon-Sat, 10:00 AM - 6:00 PM</p>
+                </div>
+
+                <div class="mt-4">
+                    <h5 class="text-white">Follow Us</h5>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card card-custom p-4">
+                <h3 class="mb-3 text-dark">Send a Message / Grievance</h3>
+                <div id="successMessage" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                    <i class="fas fa-check-circle me-2"></i> Your message has been submitted successfully!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <form id="contactForm" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter name (minimum 3 characters)" required minlength="3">
+                            <small class="text-danger d-none" id="nameError">Name must be at least 3 characters long.</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="10-digit number" required pattern="[0-9]{10}">
+                            <small class="text-danger d-none" id="phoneError">Phone number must be exactly 10 digits.</small>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                        <small class="text-danger d-none" id="emailError">Please enter a valid email address.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Department (Optional)</label>
+                        <select class="form-select" id="department" name="department">
+                            <option selected>Select Department</option>
+                            <option>Water Supply</option>
+                            <option>Solid Waste</option>
+                            <option>Roads</option>
+                            <option>Health</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message / Complaint <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Describe your issue..." required minlength="10"></textarea>
+                        <small class="text-danger d-none" id="messageError">Message must be at least 10 characters long.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary px-4">
+                        <i class="fas fa-paper-plane me-2"></i>Submit Ticket
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer><div class="container text-center text-white">&copy; 2026 TMC</div></footer>
+<div id="chatbot-toggle"><i class="fas fa-comment-dots"></i></div>
+<div id="chatbot"><div class="chatbot-header">Assistant<span id="close">&times;</span></div><div id="messages"></div><div class="chat-input-area"><input id="userInput"></div></div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="chatbot.js?v=2"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const fullNameInput = document.getElementById('fullName');
+    const phoneInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    
+    const nameError = document.getElementById('nameError');
+    const phoneError = document.getElementById('phoneError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const successMessage = document.getElementById('successMessage');
+
+    // Real-time validation for name
+    fullNameInput.addEventListener('blur', function() {
+        if (this.value.trim().length < 3 && this.value.trim() !== '') {
+            nameError.classList.remove('d-none');
+            this.classList.add('is-invalid');
+        } else {
+            nameError.classList.add('d-none');
+            this.classList.remove('is-invalid');
+        }
+    });
+
+    fullNameInput.addEventListener('input', function() {
+        if (this.value.trim().length >= 3) {
+            nameError.classList.add('d-none');
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        }
+    });
+
+    // Real-time validation for phone
+    phoneInput.addEventListener('blur', function() {
+        const phoneValue = this.value.replace(/\D/g, '');
+        if (phoneValue.length !== 10 && this.value !== '') {
+            phoneError.classList.remove('d-none');
+            this.classList.add('is-invalid');
+        } else {
+            phoneError.classList.add('d-none');
+            this.classList.remove('is-invalid');
+        }
+    });
+
+    phoneInput.addEventListener('input', function() {
+        // Allow only digits
+        this.value = this.value.replace(/[^0-9]/g, '');
+        const phoneValue = this.value;
+        
+        if (phoneValue.length === 10) {
+            phoneError.classList.add('d-none');
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        } else if (phoneValue.length > 0) {
+            phoneError.classList.remove('d-none');
+            this.classList.add('is-invalid');
+            this.classList.remove('is-valid');
+        }
+    });
+
+    // Real-time validation for email
+    emailInput.addEventListener('blur', function() {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(this.value) && this.value !== '') {
+            emailError.classList.remove('d-none');
+            this.classList.add('is-invalid');
+        } else {
+            emailError.classList.add('d-none');
+            this.classList.remove('is-invalid');
+        }
+    });
+
+    emailInput.addEventListener('input', function() {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailRegex.test(this.value)) {
+            emailError.classList.add('d-none');
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        }
+    });
+
+    // Real-time validation for message
+    messageInput.addEventListener('blur', function() {
+        if (this.value.trim().length < 10 && this.value.trim() !== '') {
+            messageError.classList.remove('d-none');
+            this.classList.add('is-invalid');
+        } else {
+            messageError.classList.add('d-none');
+            this.classList.remove('is-invalid');
+        }
+    });
+
+    messageInput.addEventListener('input', function() {
+        if (this.value.trim().length >= 10) {
+            messageError.classList.add('d-none');
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        }
+    });
+
+    // Form submission validation
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+
+        // Clear all previous messages
+        nameError.classList.add('d-none');
+        phoneError.classList.add('d-none');
+        emailError.classList.add('d-none');
+        messageError.classList.add('d-none');
+        successMessage.classList.add('d-none');
+
+        // Validate name
+        if (fullNameInput.value.trim().length < 3) {
+            nameError.classList.remove('d-none');
+            fullNameInput.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            fullNameInput.classList.remove('is-invalid');
+            fullNameInput.classList.add('is-valid');
+        }
+
+        // Validate phone
+        const phoneValue = phoneInput.value.replace(/\D/g, '');
+        if (phoneValue.length !== 10) {
+            phoneError.classList.remove('d-none');
+            phoneInput.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            phoneInput.classList.remove('is-invalid');
+            phoneInput.classList.add('is-valid');
+        }
+
+        // Validate email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+            emailError.classList.remove('d-none');
+            emailInput.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            emailInput.classList.remove('is-invalid');
+            emailInput.classList.add('is-valid');
+        }
+
+        // Validate message
+        if (messageInput.value.trim().length < 10) {
+            messageError.classList.remove('d-none');
+            messageInput.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            messageInput.classList.remove('is-invalid');
+            messageInput.classList.add('is-valid');
+        }
+
+        // If valid, show success message and reset form
+        if (isValid) {
+            successMessage.classList.remove('d-none');
+            form.reset();
+            
+            // Clear validation classes after 3 seconds
+            setTimeout(function() {
+                fullNameInput.classList.remove('is-valid');
+                phoneInput.classList.remove('is-valid');
+                emailInput.classList.remove('is-valid');
+                messageInput.classList.remove('is-valid');
+                successMessage.classList.add('d-none');
+            }, 3000);
+        }
+    });
+});
+</script>
