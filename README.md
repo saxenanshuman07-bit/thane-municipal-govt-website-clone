@@ -1,1 +1,1 @@
-# thane-municipal-govt-website-clone
+The Thane Municipal Government website serves as an online gateway for residents to access municipal services, announcements, grievance redressal, tax details, and city-related updates. It helps make public services more convenient, transparent, and accessible to everyone.
